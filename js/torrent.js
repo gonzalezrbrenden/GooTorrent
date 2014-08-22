@@ -356,9 +356,8 @@ Torrent.prototype = {
                     console.log('utf-8 torrent', this.metadata)
                 }
             }
-
         } catch(e) {
-            callback({error:"Invalid torrent file"})
+            callback({error:"Invalid torrent file",info:e})
             return
         }
         this.infodict = this.metadata.info
